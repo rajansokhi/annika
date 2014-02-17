@@ -493,25 +493,30 @@ a.service_item p {
 
 .video_block {
 	margin-top:4px;
-	height:276px;
+	height:400px;
 }
 
 /* ___________________ //About ___________________ */
 
 /* ____________________ Progress ____________________ */
 #progress {
+	overflow:hidden;
 	position:relative;
-	padding:43px 0 35px;
-	background-image: url(../images/progress_bg.jpg);
+	top:-67px;
+	margin-bottom:-67px;
+	padding:0;
+	min-height:850px;
+	background: url(../images/progress_bg.jpg);
+	background-size:cover;
 }
 .progress_fill {
 	position:absolute;
-	z-index:0;
 	left:0;
 	top:0;
 	width:100%;
 	height:100%;
-	background:url(../images/progress_fill.png);
+	background: url(../images/progress_fill.png);
+
 }
 #progress .container {
 	position:relative;
@@ -539,7 +544,52 @@ a.service_item p {
 .progress_block li.color4 {color:#60b7c7;	
 }
 
-/* ___________________ //Progress ___________________ */
+/* ___________________ //interval2 ___________________ */
+
+#interval2 {
+	overflow:hidden;
+	position:relative;
+	top:-67px;
+	margin-bottom:-67px;
+	padding:0;
+	min-height:850px;
+	background: url(../images/interval2_bg.jpg);
+	background-size:cover;
+}
+.interval2_fill {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background: url(../images/progress_fill.png);
+
+}
+#interval2.container {
+	position:relative;
+	z-index:1;
+	text-align:center;
+}
+
+.interval2_block li {
+	text-transform:uppercase;
+	text-align:center;
+	line-height:20px;
+	font-size:15px;
+}
+.interval2_block li span {
+	display:block;
+	line-height:73px;
+	font-size:56px;
+}
+.interval2_block li.color1 {color:#60c7aa;	
+}
+.interval2_block li.color2 {color:#ff797d;	
+}
+.interval2_block li.color3 {color:#ffd77f;	
+}
+.interval2_block li.color4 {color:#60b7c7;	
+}
 
 
 /* ____________________ Portfolio ____________________ */
