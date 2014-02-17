@@ -252,7 +252,6 @@ a.menu_toggler { display:none;
 
 /* _________ //Menu _________ */
 
-/* ___________________ //Header ___________________ */
 
 /* ____________________ Home ____________________ */
 #home {
@@ -262,8 +261,9 @@ a.menu_toggler { display:none;
 	margin-bottom:-67px;
 	padding:0;
 	min-height:850px;
-	background-image: url(../images/home_bg.jpg);
 	background-size:cover;
+	height: auto;
+
 }
 #home .home_fill {
 	position:absolute;
@@ -290,6 +290,7 @@ a.menu_toggler { display:none;
 	background: #4d4c4f;
 	background: rgba(255,255,255,0.13);
 }
+
 
 /* __________ Socials __________ */
 .top_socials li {
@@ -334,10 +335,37 @@ a.down_btn {
 	width:26px;
 	height:26px;
 	background:url(../images/down_btn.png) no-repeat;
+	
 }
 
-/* ___________________ //Home ___________________ */
+/* ___________________ //down button 2 ___________________ */
 
+a.down_btn2 {
+	position:absolute;
+	z-index:1;
+	left:50%;
+	bottom:800px;
+	margin-left:-13px;
+	display:block;
+	width:26px;
+	height:26px;
+	background:url(../images/down_btn.png) no-repeat;
+	}
+	
+/* ___________________ //down button 3 ___________________ */
+
+a.down_btn3 {
+	position:absolute;
+	z-index:1;
+	left:50%;
+	bottom:800px;
+	margin-left:-13px;
+	display:block;
+	width:26px;
+	height:26px;
+	background:url(../images/down_btn.png) no-repeat;
+	}
+	
 
 /* ____________________ Services ____________________ */
 #services .title_section {
@@ -615,8 +643,9 @@ a.service_item p {
 /* _________ //Filter _________ */
 .portfolio_block .element {
 	overflow:hidden;
-	float:left;
-	width:33.33%;
+	float:center;
+	width:12%;
+	margin-left:15px;
 }
 .portfolio_item .hover_img {
 	position:relative;
@@ -854,7 +883,7 @@ input[type="text"] {
 	font-family: 'Cabin', sans-serif;
 	font-weight:400;
 	font-size: 13px;
-	color: #999;
+	color: #000000;
 	font-style:normal;
 	border-radius: 0;	
 	background: #e7e7e7;
@@ -1227,6 +1256,7 @@ input[type="color"]:focus {
 
 	
 }
+
 
 
 

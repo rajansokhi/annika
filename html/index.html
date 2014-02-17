@@ -17,22 +17,39 @@
 	<link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
-	
-	<script src="js/jquery.stellar.min.js" type="text/javascript"></script>
-	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>	
+	<script src="js/jquery.stellar.min.js" type="text/javascript"></script>	
 	<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
-	<script src="js/sorting.js" type="text/javascript"></script>
-	
-	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	
+	<script src="js/sorting.js" type="text/javascript"></script>	
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>	
 	<script src="js/waypoints.js" type="text/javascript"></script>
-	
 	<script src="js/jquery.timer.js"></script>
-	
 	<script src="js/block_animate.js" type="text/javascript"></script>
-	
     <script src="js/myscript.js" type="text/javascript"></script>
+	
+	<script type="text/javascript" src="http://www.pitstopmotors.com.ph/js/jquery-1.4.2.js"></script>
+	<script type="text/javascript">
+        function carousel_bg(id) {
+                var bgimgs = [ 'images/1.jpg', 'images/2.jpg', 'images/3.jpg' ]; // add images here..
+                var img = bgimgs[id];
+                var cnt = 3; // change this number when adding images..
+				
+				$('#home').fadeTo('slow', 0.3, function() {
+				$(this).css("background-image", "url("+img+")");
+				}).fadeTo('slow', 1);
+				
+                id = id + 1;
+                if (id==cnt) id = 0;
+
+                setTimeout("carousel_bg("+id+")", 7000);
+        }
+
+        $(document).ready(function() {
+                carousel_bg(0);     
+        });
+	</script>
+
+
 </head>
 <body>
     <!-- #page -->
@@ -71,7 +88,11 @@
 				</div>
 				<a href="#about" class="down_btn top_btn"></a>
 			</div>
-			<div class="home_fill"></div>
+			
+			<div class="home_fill">
+			</div>
+			
+		
             
         </section><!-- //home content -->
 		
@@ -115,9 +136,8 @@
 				</ul>
 			</div><!-- //section header -->
 			<div class="progress_fill"></div>
-            
+            	<a href="#portfolio" class="down_btn2 top_btn"></a>
             </div>
-				<a href="#portfolio" class="down_btn2 top_btn"></a>
 			</div>
             
 		</section><!-- //progress content-->
@@ -192,6 +212,15 @@
 								<div class="item_descr">photo & art</div>
 							</div>
 						</div>
+						<div class="element wedding2">
+							<div class="portfolio_item">
+								<div class="hover_img">
+									<img src="images/projects/5.jpg" alt="" />
+									<a class="zoom" href="images/projects/5.jpg" rel="prettyPhoto[portfolio1]"></a>
+								</div>
+								<div class="item_descr">photo & art</div>
+							</div>
+						</div>
 						<div class="element fashion">
 							<div class="portfolio_item">
 								<div class="hover_img">
@@ -203,7 +232,7 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="load_more_cont"><a href="javascript:void(0)" class="btn_load_more">More</a></div>
+
 					<script type="text/javascript">
 						jQuery(window).load(function(){
 							items_set = [
@@ -224,6 +253,9 @@
 					</script><!-- portfolio_block -->
 				</div><!-- //section content -->
 			</div>
+			
+			<br></br> <br></br><br></br><br></br><br></br> <br></br>
+			
         </section><!-- //portfolio content-->
 
 				<!-- second interval content-->
@@ -235,6 +267,7 @@
 				</ul>
 			</div><!-- //section header -->
 			<div class="interval2_fill"></div>
+				<a href="#contact" class="down_btn3 top_btn"></a>
 		</section><!-- //interval content-->
 
 
@@ -272,11 +305,11 @@
 								<form id="ajax-contact-form" action="">
 									<input class="input_wt" type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
 									<input class="input_wt last" type="text" name="phone" value="Phone" onFocus="if (this.value == 'Phone') this.value = '';" onBlur="if (this.value == '') this.value = 'Phone';" />
+									<input class="input_wt last2" type="text" name="email" value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
 									<textarea class="input_wt" name="message" id="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
 									<input type="submit" class="contact_btn" value="" />
 									<div class="clear"></div>
-								</form>
-                                <br></br>                                
+								</form>                               
 							</div>
 						</div><!-- //contact form -->
 					</div>
@@ -291,7 +324,7 @@
         	<div class="footer_bottom container">         
                 <div class="fleft copyright">Annika Couture &copy; 2020 | <a href="javascript:void(0);">Privacy Policy</a></div>               
 				<a href="#home" class="fright down_btn"></a>
-                 <br></br> <br></br>
+                 <br></br>
 				<div class="clear"></div>
             </div>
         	<!-- //footer_bottom -->

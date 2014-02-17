@@ -55,7 +55,7 @@ jQuery(document).ready(function() {
 		$(window).scroll(function(event) {
 			calculateScroll();
 		});
-		$('.navmenu ul li a, .mobile_menu ul li a, .down_btn, .home_btn').click(function() {  
+		$('.navmenu ul li a, .mobile_menu ul li a, .down_btn, .home_btn, .down_btn2, .down_btn3').click(function() {  
 			$('html, body').animate({scrollTop: $(this.hash).offset().top - 67}, 1000);
 			return false;
 		});
