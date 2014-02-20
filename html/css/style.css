@@ -72,7 +72,7 @@ p {
 	font-size:0;
 }
 
-h1 {
+/*h1 {
 	display:inline-block;
 	margin: 0 0 16px;
 	padding: 0 28px;
@@ -83,7 +83,8 @@ h1 {
 	color: #fff;
 	background: #4d4c4f;
 	background: rgba(255,255,255,0.13);
-}
+}*/
+
 h2 {
 	margin:0;
 	padding:0;
@@ -299,29 +300,33 @@ a.menu_toggler { display:none;
 }
 .top_socials li a {
 	display:block;
-	width:32px;
-	height:32px;
+	width:45px;
+	height:45px;
 	border-radius:50%;
 	background-image:url(../images/top_socials.png);
 	background-repeat:no-repeat;
 	transition: none;
 	-webkit-transition: none;
 }
-.top_socials li a.soc1 {background-position:0 0;
+.top_socials li a.soc1 {background-position: 0 -50px;
 }
-.top_socials li a.soc1:hover {background-position:0 -32px;
+.top_socials li a.soc1:hover {background-position:0 -2px;
 }
-.top_socials li a.soc2 {background-position:-40px 0;
+.top_socials li a.soc2 {background-position:-55px -50px;
 }
-.top_socials li a.soc2:hover {background-position:-40px -32px;
+.top_socials li a.soc2:hover {background-position:-55px -2px;
 }
-.top_socials li a.soc3 {background-position:-80px 0;
+.top_socials li a.soc3 {background-position:-111px -50px;
 }
-.top_socials li a.soc3:hover {background-position:-80px -32px;
+.top_socials li a.soc3:hover {background-position:-111px -2px;
 }
-.top_socials li a.soc4 {background-position:-120px 0;
+.top_socials li a.soc4 {background-position:-170px -50px;
 }
-.top_socials li a.soc4:hover {background-position:-120px -32px;
+.top_socials li a.soc4:hover {background-position:-170px -2px;
+}
+.top_socials li a.soc5 {background-position:-224px -50px;
+}
+.top_socials li a.soc5:hover {background-position:-224px -2px;
 }
 /* _________ //Socials _________ */
 
@@ -351,6 +356,8 @@ a.down_btn2 {
 	height:26px;
 	background:url(../images/down_btn.png) no-repeat;
 	}
+	
+	
 	
 /* ___________________ //down button 3 ___________________ */
 
@@ -513,7 +520,12 @@ a.service_item p {
 
 
 /* ____________________ About ____________________ */
-#about .title_section {background-image: url(../images/i2.png);
+#about .title_section {
+	background:url(../images/Flower-Vintage-Background.jpg);
+	opacity:0.6;
+	width: 100%;
+	height:67px;
+font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
 .about_slide {padding-top:4px;
@@ -537,6 +549,7 @@ a.service_item p {
 	background: url(../images/progress_bg.jpg);
 	background-size:cover;
 }
+	
 .progress_fill {
 	position:absolute;
 	left:0;
@@ -546,6 +559,19 @@ a.service_item p {
 	background: url(../images/progress_fill.png);
 
 }
+
+h1 {
+	position:relative;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px; 
+	opacity:0.2;
+	top: 300px;
+	font-family: 'Pinyon Script', cursive;
+	font-size: 50px;
+	padding-left:4px;
+}
+
 #progress .container {
 	position:relative;
 	z-index:1;
@@ -621,7 +647,12 @@ a.service_item p {
 
 
 /* ____________________ Portfolio ____________________ */
-#portfolio .title_section {background-image: url(../images/i3.png);
+#portfolio .title_section {
+	background:url(../images/Flower-Vintage-Background.jpg);
+	opacity:0.6;
+	width: 100%;
+	height:67px;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
 /* __________ Filter __________ */
@@ -850,7 +881,12 @@ a.post_more {color:#505050;
 	overflow:hidden;
 	position:relative;
 }
-#contact .title_section {background-image:url(../images/i5.png);
+#contact .title_section {
+	background:url(../images/Flower-Vintage-Background.jpg);
+	opacity:0.6;
+	width: 100%;
+	height:67px;	
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
 .border_bottom {border-bottom:1px solid #e7e7e7;
@@ -894,7 +930,7 @@ textarea {
 	min-height:80px;
 	overflow:hidden;
 	resize: none;
-	margin-bottom:8px;
+	margin-bottom:2px;
 }
 textarea,
 input[type="text"].last {
@@ -923,7 +959,7 @@ input[type="color"]:focus {
 	display:block;
 	cursor:pointer;
 	width:100%;
-	padding:9px 0 10px;
+	padding:9px 0 11px;
 	border: 0;
 	border-radius: 0;
 	box-shadow: 0;
@@ -1205,7 +1241,7 @@ input[type="color"]:focus {
 /* _________ //Contact _________ */
 
 
-	.contact_info {margin-bottom:20px;}
+	.contact_info {margin-bottom:10px;}
 	
 	
 	#contact textarea, #contact input[type="text"] {width:438px;}
