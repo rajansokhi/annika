@@ -3,7 +3,7 @@
                 var img = bgimgs[id];
                 var cnt = 3; // change this number when adding images..
 				
-				$('#home').fadeTo('slow', 0.3, function() {
+				$('#home .home_background').fadeTo('slow', 0.3, function() {
 				$(this).css("background-image", "url("+img+")");
 				}).fadeTo('slow', 1);
 				
