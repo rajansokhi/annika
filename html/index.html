@@ -19,7 +19,7 @@
     <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="js/jquery.stellar.min.js" type="text/javascript"></script>	
 	<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
 	<script src="js/sorting.js" type="text/javascript"></script>	
@@ -29,6 +29,69 @@
 	<script src="js/block_animate.js" type="text/javascript"></script>
     <script src="js/myscript.js" type="text/javascript"></script>
     <script src="js/Image_carousel.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#submit_btn").click(function() { 
+        //get input field values
+        var user_name       = $('input[name=name]').val(); 
+        var user_email      = $('input[name=email]').val();
+        var user_phone      = $('input[name=phone]').val();
+        var user_message    = $('textarea[name=message]').val();
+        
+        //simple validation at client's end
+        //we simply change border color to red if empty field using .css()
+        var proceed = true;
+        if(user_name==""){ 
+            $('input[name=name]').css('border-color','red'); 
+            proceed = false;
+        }
+        if(user_email==""){ 
+            $('input[name=email]').css('border-color','red'); 
+            proceed = false;
+        }
+        if(user_phone=="") {    
+            $('input[name=phone]').css('border-color','red'); 
+            proceed = false;
+        }
+        if(user_message=="") {  
+            $('textarea[name=message]').css('border-color','red'); 
+            proceed = false;
+        }
+        
+        //everything looks good! proceed...
+        if(proceed) 
+        {
+            //data to be sent to server
+            post_data = {'userName':user_name, 'userEmail':user_email, 'userPhone':user_phone, 'userMessage':user_message};
+            
+            //Ajax post data to server
+            $.post('contact_me.php', post_data, function(data){  
+                
+                //load success massage in #result div element, with slide effect.       
+                $("#result").hide().html('<div class="success">'+data+'</div>').slideDown();
+                
+                //reset values in all input fields
+                $('#contact_form input').val(''); 
+                $('#contact_form textarea').val(''); 
+                
+            }).fail(function(err) {  //load any error data
+                $("#result").hide().html('<div class="error">'+err.statusText+'</div>').slideDown();
+            });
+        }
+                
+    });
+    
+    //reset previously set border colors and hide all message on .keyup()
+    $("#contact_form input, #contact_form textarea").keyup(function() { 
+        $("#contact_form input, #contact_form textarea").css('border-color',''); 
+        $("#result").slideUp();
+    });
+    
+});
+</script>
 
     <script> 
 $(document).ready(function(){
@@ -273,12 +336,14 @@ $("#example").click(function() {
 
         <!-- Contact content -->
         <section id="contact">
+
 			<!-- section header -->
 			<div class="title_section">
 				<div class="container">
 					<h2>Make an appointment</h2>
 				</div>
 			</div><!-- //section header -->
+
 			
 			<div class="container page_section">
 				<div class="row">
@@ -298,18 +363,39 @@ $("#example").click(function() {
 					
 					<div class="span8">
 						<!-- contact form -->
-						<div class="contact_form">  
-							<div id="note"></div>
-							<div id="fields">
-								<form id="ajax-contact-form" action="">
-									<input class="input_wt" type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
-									<input class="input_wt last" type="text" name="phone" value="Phone" onFocus="if (this.value == 'Phone') this.value = '';" onBlur="if (this.value == '') this.value = 'Phone';" />
-									<input class="input_wt last2" type="text" name="email" value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
-									<textarea class="input_wt" name="message" id="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
-									<input type="submit" class="contact_btn" value="" />
-									<div class="clear"></div>
-								</form>                               
-							</div>
+
+						<div class="contact_form1">  
+
+
+							<fieldset id="contact_form">
+								<div id="result"></div>
+
+    								<label for="name"><span>Name</span>
+    									<input type="text" name="name" id="name" placeholder="Enter Your Name" />
+    								</label>
+    
+    								<label for="email"><span>Email Address</span>
+    									<input type="text" name="email" id="email" placeholder="Enter Your Email" />
+   									 </label>
+    
+    								<label for="phone"><span>Phone</span>
+    									<input type="text" name="phone" id="phone" placeholder="Phone Number" />
+    								</label>
+    
+    								<label for="message"><span>Message</span>
+    									<textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+    								</label>
+    
+    								<label><span>&nbsp;</span>
+
+    								</label>
+
+
+    								
+    								<input type="submit" class="submit_btn" id="submit_btn" value="" />
+							</fieldset>
+
+
 						</div><!-- //contact form -->
 					</div>
 					<div class="clear"></div>
