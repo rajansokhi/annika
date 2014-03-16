@@ -156,6 +156,10 @@ h4 {
 	background: rgba(255,255,255,0.22);
 }
 
+.toplogo img {
+	opacity: 0;
+}
+
 #logo a {
 	position:absolute;
 	left:50%;
@@ -171,8 +175,6 @@ h4 {
 	-webkit-transform: translate(-52%, 0);
 }
 
-/* __________ Menu _________ */
-
 /* __________ Fixed Menu Style __________ */
 .fixed-menu {
 	position:fixed;
@@ -186,12 +188,15 @@ h4 {
 	filter: alpha(opacity=0);
 	transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
+
 }
+
 .fixed-menu.fixed_show {
 	top:0px;
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
+
 .fixed-menu-wrapper {
 	padding: 0;
 }
@@ -238,7 +243,14 @@ a.menu_toggler { display:none;
 	color:#FF0080;
 }
 
-/* _________ //Menu _________ */
+.fixed-menu.fixed_show img {
+	opacity: 1;
+}
+
+.fixed-menu.fixed_show:hover img {
+	opacity: 0.7;
+	cursor:pointer;
+}
 
 
 /* ____________________ Home ____________________ */
@@ -288,7 +300,6 @@ a.menu_toggler { display:none;
 	background: #4d4c4f;
 	background: rgba(255,255,255,0.13);
 }
-
 
 /* __________ Socials __________ */
 .top_socials li {
@@ -788,6 +799,7 @@ h1 {
 
 @media (max-width: 766px) {
 	.container {width:470px;}
+	.toplogo img {width:69px; height:69px}
 	
 	.title_section {padding:35px 0;}
 	
@@ -893,28 +905,16 @@ h1 {
 @media (max-width: 479px) {	
 	.container {width:310px;}
 
-/* __________ About __________ */
-	
-/* _________ //About _________ */
+	.toplogo img {width:69px; height:69px}
 
-/* __________ Portfolio __________ */
 	.portfolio_block .element {width:100%;}
 	
-/* _________ //Portfolio _________ */
-
-	
-/* _________ //Blog _________ */
-	
-	
 	#contact textarea, #contact input[type="text"] {width:278px;}
-
-
 	
 	.footer {text-align:center;}
 	.footer .fleft, .footer .fright {float:none;}
 	
 	.copyright {text-align:center;}
 	.footer a.down_btn {display:inline-block; margin:10px auto;}
-
 	
 }

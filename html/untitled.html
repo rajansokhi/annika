@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+
+
+$("#panelA").click(function(){
+
+if($('#panel2').is(':visible')) {
+    $('#panel2').hide(1000);
+}
+if($('#panel3').is(':visible')) {
+    $('#panel3').hide(1000);
+}
+
+$("#panel").slideToggle("slow");
+
+  });
+});
+
+$(document).ready(function(){
+$("#panelB").click(function(){
+
+if($('#panel').is(':visible')) {
+    $('#panel').hide(1000);
+}
+if($('#panel3').is(':visible')) {
+    $('#panel3').hide(1000);
+}
+
+$("#panel2").slideToggle("slow");
+
+  });
+});
+
+
+$(document).ready(function(){
+$("#panelC").click(function(){
+
+if($('#panel').is(':visible')) {
+    $('#panel').hide(1000);
+}
+if($('#panel2').is(':visible')) {
+    $('#panel2').hide(1000);
+}
+
+$("#panel3").slideToggle("slow");
+
+  });
+
+$('.close1').on("click",function(){
+    $('#panel').slideUp("slow");
+})
+
+$('.close2').on("click",function(){
+    $('#panel2').slideUp("slow");
+})
+
+$('.close3').on("click",function(){
+    $('#panel3').slideUp("slow");
+})
+
+
+});
+
+
+
+</script>
+
+
+
+<style type="text/css">
+
+#panel,#panel2,#panel3,#flip
+
+{
+
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+
+#panel,#panel2,#panel3 
+
+{
+
+padding:50px;
+display:none;
+position: absolute;
+top: 110px;
+width:100%;
+opacity: 0.7;
+border-width: 2px;
+border-color: #8C8C8C;
+
+}
+
+div a {
+    width:  40px;
+    height: 40px;
+    display: block;
+    background-image: url('http://www.cmstricks.com/assets/images/close.png');
+}
+
+div a:hover {
+    opacity: 0.5;
+}
+
+/*  SECTIONS  */
+
+.section {
+
+clear: both;
+padding: 0px;
+margin: 0px;
+
+}
+
+/*  COLUMN SETUP  */
+
+.col {
+display: block;
+float:left;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+
+.col:first-child { margin-left: 0;
+
+}
+
+.col:hover {
+    opacity: 0.8;
+    cursor:pointer;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+
+content:"";
+display:table;
+
+}
+
+.group:after {
+clear:both;
+
+}
+
+.group {
+ zoom:1; /* For IE 6/7 */
+
+}
+
+ 
+
+/*  GRID OF THREE  */
+
+.span_3_of_3 {width: 100%;
+}
+.span_2_of_3 {width: 66.1%;
+}
+.span_1_of_3 {width: 32.2%;
+}
+
+ 
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+                .col {margin: 1% 0 1% 0%;
+                }
+
+}
+
+ 
+
+@media only screen and (max-width: 480px) {
+
+                .span_3_of_3 {width: 100%;
+                }
+                .span_2_of_3 {width: 100%;
+                }
+                .span_1_of_3 {width: 100%;
+                }
+
+ } 
+
+
+
+}
+
+ 
+
+</style>
+
+</head>
+
+<body>
+
+<div class="section group">
+
+                <div id="panelA" class="col span_1_of_3">
+                This is column 1 <br><br><br><br><br><br>
+                </div>
+
+                    <div id="panel"> 
+                        <p>description 1 of the dress </p>
+                        <a href="javascript:void(0)" class="close1"></a>
+                    </div>
+
+
+
+                <div id="panelB" class="col span_1_of_3">
+                This is column 2 <br><br><br><br><br><br>
+                </div>
+
+
+                    <div id="panel2">
+                        <p>description 2 of the dress </p>
+                        <a href="javascript:void(0)" class="close2"></a>
+                    </div>
+
+
+                <div id="panelC" class="col span_1_of_3">
+                This is column 3 <br><br><br><br><br><br>
+                </div>
+
+
+                    <div id="panel3">
+                        <p>description 3 of the dress </p>
+                        <a href="javascript:void(0)" class="close3"></a>
+                    </div>
+
+
+</div>
+
+
+
+
+ 
+
+</body>
+
+</html>
