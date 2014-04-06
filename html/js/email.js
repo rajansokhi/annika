@@ -1,7 +1,7 @@
-
 $(document).ready(function() {
+
     $("#submit_btn").click(function() { 
-        //collect input field values
+        //get input field values
         var user_name       = $('input[name=name]').val(); 
         var user_email      = $('input[name=email]').val();
         var user_phone      = $('input[name=phone]').val();
