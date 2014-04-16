@@ -1,3 +1,4 @@
+        
         function carousel_bg(id) {
                 var bgimgs = [ 'images/1.jpg', 'images/2.jpg', 'images/3.jpg' ]; // add images here..
                 var img = bgimgs[id];
