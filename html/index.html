@@ -10,6 +10,7 @@
     
     <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/carosel_style.css" rel="stylesheet" type="text/css" />
     <!-- <link href="css/carosel_style.css" rel="stylesheet" type="text/css"/> -->
     
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -64,10 +65,19 @@
   });
     //@ sourceURL=pen.js
   </script>
+
+  <script>
+  $(window).bind('resize',function() {
+    var winWidth = $(window).width();
+    if (winWidth < 1080) {
+        location.reload(true);
+    }});
+  </script>
+
 <!-- new -->
     
     <!-- #page -->
-    <div id="page">            
+    <div id="page">       
         
 		<!-- header section -->
         <section id="top">
@@ -102,6 +112,8 @@
 			<div class="container">
 				<div class="welcome_block">
 
+					    <div id="log"></div>     
+
 					<h1 class="opacity"></h1>
 					<p class="opacity"></p>
 
@@ -113,6 +125,10 @@
 						<li><a class="soc4 opacity" href="http://www.facebook.com" alt=""></a></li>
                         <li><a class="soc5 opacity" href="http://www.facebook.com" alt=""></a></li>
 					</ul>
+
+						<br><br>
+						<a class="login" href="#">LOG IN  </a> &nbsp; | &nbsp;<a class="register" href="#">   REGISTER</a>
+
 				</div>
 				<a href="#about" class="down_btn top_btn"></a>
 			</div>
@@ -187,7 +203,7 @@
 
 
 					<div class="text_container">
-					<p>Fusce porta facilisis luctus. Integer neque dolor, rhoncus nec euismod eget, pharetra et tortor. Nulla id pulvinar nunc. Vestibulum auctor nisl vel lectus ullamcorper sed pellentesque dolor eleifend. Praesent lobortis magna vel diam mattis sagittis. Mauris porta odio eu risus scelerisque id facilisis ipsum dictum. Donec fringilla pharetra sapien eget imperdiet. Vivamus iaculis ultricies mauris id posuere.</p>
+					<p>Fusce porta facilisis luctus. Integer neque dolor, rhoncus nec euismod eget, pharetra et tortor. Nulla id pulvinar nunc. Vestibulum auctor nisl vel lectus ullamcorper sed pellentesque dolor eleifend. Praesent lobortis ulvinar nunc. Vestibulum auctor nisl vel lectus ullamcorper sed pellentesque dolor eleifend. Praesent lobortis  </p>
 				</div>
 
 		
@@ -207,15 +223,15 @@
             <div class="item active">
 
                 <div class="bannerImage">
-                    <a href="#"><img src="images/1.jpg" alt=""></a>
+                    <a><img src="images/1crop.jpg" alt=""></a>
                 </div>
 
                 <div class="caption row-fluid">
                     <div class="span4"><h3>EDGY</h3>
 
                     </div>                  
-                    <div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                                            <a class="btn btn-mini" href="#">&raquo; Log in to view catalogue of all collections</a>
+                    <div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac e</p>
+                                            <a class="btn btn-mini" href="#">&raquo; Log in to view catalogue of this collection</a>
                     </div>
                 </div>
 
@@ -224,15 +240,15 @@
             <div class="item">
 
                 <div class="bannerImage">
-                    <a href="#"><img src="images/2.jpg" alt=""></a>
+                    <a><img src="images/2crop.jpg" alt=""></a>
                 </div>
 
                 <div class="caption row-fluid">
                     <div class="span4"><h3>SHOW STOPPER</h3>
 
                     </div>                  
-                    <div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                                            <a class="btn btn-mini" href="#">&raquo; Log in to view catalogue of all collections</a>
+                    <div class="span8"><p>raesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac</p>
+                                            <a class="btn btn-mini" href="#">&raquo; Log in to view catalogue of this collection</a>
                     </div>
                 </div>
 
@@ -241,15 +257,15 @@
             <div class="item">
 
                 <div class="bannerImage">
-                    <a href="#"><img src="images/3.jpg" alt=""></a>
+                    <a><img src="images/3crop.jpg" alt=""></a>
                 </div>
 
                 <div class="caption row-fluid">
                     <div class="span4"><h3>CLASSIC</h3>
         
                     </div>                  
-                    <div class="span8"><p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                                    <a class="btn btn-mini" href="#">&raquo; Log in to view catalogue of all collections</a>
+                    <div class="span8"><p>raesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac</p>
+                                    <a class="btn btn-mini" href="#">&raquo; Log in to view catalogue of this collection</a>
                     </div>
                 </div>
 
@@ -267,7 +283,7 @@
 </div><!-- /.span12 -->          
 </div><!-- /.row --> 
 </div><!-- /.container -->
-
+<br>
 
 <!-- new -->
 
@@ -362,8 +378,6 @@
     								<label><span>&nbsp;</span>
 
     								</label>
-
-
     								
     								<input type="submit" class="submit_btn" id="submit_btn" value="" />
 							</fieldset>

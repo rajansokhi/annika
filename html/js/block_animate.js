@@ -1,5 +1,6 @@
 if ($(window).width() > 1024){
 (function() {
+
 	var mywebsite;
 
 	mywebsite = (function() {
