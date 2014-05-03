@@ -7,10 +7,10 @@
 
 	<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css'>
 
-    
     <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/carosel_style.css" rel="stylesheet" type="text/css" />
+
     <!-- <link href="css/carosel_style.css" rel="stylesheet" type="text/css"/> -->
     
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -23,15 +23,21 @@
     <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
    
-
 </head>
 <body>
 
 	    <!-- load jquery -->
 
+
 <script src="js/carosel_js.js" type="text/javascript"></script>
 <script src="js/carosel_jquery.js" type="text/javascript"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js'></script>
+
+	    <link rel="stylesheet" href="colorbox.css" type='text/css'/>
+<!-- 		// <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+		<script src="js/jquery.colorbox.js" type="text/javascript"></script>
+
+
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="js/jquery.stellar.min.js" type="text/javascript"></script>	
@@ -43,8 +49,8 @@
 	<script src="js/block_animate.js" type="text/javascript"></script>
     <script src="js/myscript.js" type="text/javascript"></script>
     <script src="js/Image_carousel.js" type="text/javascript"></script>
-    <script src="js/collection.js" type="text/javascript"></script>
     <script src="js/email.js" type="text/javascript"></script>
+    <script src="js/popup.js" type="text/javascript"></script>
 
 <!-- new -->
 
@@ -56,15 +62,15 @@
     __bindToLinks();
   </script>
 
-  <script>
-    // Carousel Auto-Cycle
-  $(document).ready(function() {
+   <script>
+     // Carousel Auto-Cycle
+   $(document).ready(function() {
     $('.carousel').carousel({
       interval: 6000
     })
   });
     //@ sourceURL=pen.js
-  </script>
+   </script>
 
   <script>
   $(window).bind('resize',function() {
@@ -73,6 +79,13 @@
         location.reload(true);
     }});
   </script>
+
+  		<script>
+			$(document).ready(function(){
+				$(".inline").colorbox({inline:true, width:"50%"});
+			});
+		</script>
+
 
 <!-- new -->
     
@@ -135,9 +148,6 @@
 		
             
         </section><!-- //home content -->
-		
-
-
 
         <!-- about content-->
         <section id="about">
@@ -389,16 +399,33 @@
 				</div>
 			</div><!-- //section content -->
 		</section><!-- //contact content -->
+
+				<!-- This contains the hidden content for inline calls -->
+		<div style='display:none'>
+			<div id='inline_content'>
+			<h2><strong>First Policy</strong></h2><hr>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<h2><strong>Second Policy</strong></h2><hr>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<h2><strong>Third Policy</strong></h2><hr>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+			<p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+				</div>
+			</div>
 		
-
-
 
 
         <!--footer-->
         <div class="footer">
         	<!-- footer_bottom -->
         	<div class="footer_bottom container">         
-                <div class="fleft copyright">Annika Couture &copy; 2020 | <a href="javascript:void(0);">Privacy Policy</a></div>               
+                <div class="fleft copyright">Annika Couture &copy; 2020 | <a class='inline' href="#inline_content">Privacy Policy</a></div>
+
 				<a href="#home" class="fright down_btn"></a>
 
 				<div class="clear"></div>
